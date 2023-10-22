@@ -12,7 +12,7 @@ import { MessageService } from '../services/message.service';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
-  selectedHero?: Hero;
+  selectedHero?: Hero; // DEAD CODE
 
   hero: Hero = {
     id: 1,
@@ -25,7 +25,7 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
     this.getHeroes();
   }
-    
+  // DEAD CODE
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
