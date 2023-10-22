@@ -30,9 +30,11 @@ export class HeroService {
 
   // this is an asynchronous call
   getHeroes(): Observable<Hero[]> {
+    // note: both of() and http.get() functions return an Observable<Hero[]>
     // const heroes = of(HEROES);
     // this.messageService.add('HeroService: fetched heroes')
     // return heroes;
+
     /** GET heroes from the server */
     return this.http.get<Hero[]>(this.heroesUrl);
   }
