@@ -20,13 +20,11 @@ export class HeroesComponent implements OnInit {
     style: 'Range '
   };
 
-  constructor(
-    private heroService: HeroService,
-    private messageService: MessageService) {}
+  constructor(private heroService: HeroService, private messageService: MessageService) {}
     
-      ngOnInit(): void {
-        this.getHeroes();
-      }
+  ngOnInit(): void {
+    this.getHeroes();
+  }
     
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
