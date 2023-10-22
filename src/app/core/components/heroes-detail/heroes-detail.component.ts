@@ -29,6 +29,10 @@ export class HeroesDetailComponent implements OnInit {
     this.heroService.getHero(id)
       .subscribe(hero => this.hero = hero);
   }
+
+  goBack(): void {
+    this.location.back();
+  }
 }
 /* The ActivatedRoute holds information about the route to this instance of the HeroDetailComponent. This component is interested in the route's parameters extracted from the URL. The "id" parameter is the id of the hero to display.
 
